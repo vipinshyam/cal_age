@@ -1,0 +1,11 @@
+import datetime as dt #importing the relevant library
+
+name = input("What's the person's name? ") # Requesting name
+
+year = input(f"Which year was {name} born? ") #Using formatted string to personalize & asking for the year.
+
+y = dt.datetime.strptime(year, '%Y') #converting the year received as string to date in integer format
+
+age = int(dt.datetime.now().year) - y.year # Extracting the current year from the system & subrtracting the year given by the user
+
+print(f"{name} is {age} years old ") #personalized output with help for formatted string.
